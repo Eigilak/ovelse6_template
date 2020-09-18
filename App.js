@@ -55,14 +55,9 @@ const AppContainer = createAppContainer(TabNavigator);
 export default class App extends React.Component {
   componentWillMount() {
     const firebaseConfig = {
-      apiKey: "AIzaSyBAabaz7ftrM_SxwZkh8fQps_JtwvdZdEc",
-      authDomain: "ovelse6-a07b8.firebaseapp.com",
-      databaseURL: "https://ovelse6-a07b8.firebaseio.com",
-      projectId: "ovelse6-a07b8",
-      storageBucket: "ovelse6-a07b8.appspot.com",
-      messagingSenderId: "642033917606",
-      appId: "1:642033917606:web:90e2a79cb15e451fc8de67",
-      measurementId: "G-23W3JLCE5J"
+      //
+      //INSÆT DIN EGEN FIREBASECONFIG LIGE HER! ( Firebase --> ditprojektnavn --> møtrik --> project settings --> general --> config 
+      //
     };
     // Vi kontrollerer at der ikke allerede er en initialiseret instans af firebase
     // Så undgår vi fejlen Firebase App named '[DEFAULT]' already exists (app/duplicate-app).
