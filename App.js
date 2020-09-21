@@ -12,33 +12,33 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 const StackNavigator = createStackNavigator(
-  {
-    CarList: { screen: CarList },
-    CarDetails: { screen: CarDetails },
-  },
-  { initialRouteKey: 'CarList' }
+    {
+      CarList: { screen: CarList },
+      CarDetails: { screen: CarDetails },
+    },
+    { initialRouteKey: 'CarList' }
 );
 
 const TabNavigator = createBottomTabNavigator({
-  CarList: {
-    screen:StackNavigator,
-    navigationOptions: {
-      tabBarLabel:"CarList",
-      tabBarIcon: ({ tintColor }) => (
-          <AntDesign name="car" size={24} color={tintColor} />
-      )
+      CarList: {
+        screen:StackNavigator,
+        navigationOptions: {
+          tabBarLabel:"CarList",
+          tabBarIcon: ({ tintColor }) => (
+              <AntDesign name="car" size={24} color={tintColor} />
+          )
+        },
+      },
+      AddCar: {
+        screen:AddCar,
+        navigationOptions: {
+          tabBarLabel:"AddCar",
+          tabBarIcon: ({ tintColor }) => (
+              <AntDesign name="pluscircleo" size={24} color={tintColor} />
+          )
+        },
+      }
     },
-  },
-    AddCar: {
-    screen:AddCar,
-    navigationOptions: {
-      tabBarLabel:"AddCar",
-      tabBarIcon: ({ tintColor }) => (
-          <AntDesign name="pluscircleo" size={24} color={tintColor} />
-      )
-    },
-  }
-  },
     {
       tabBarOptions: {
         showIcon:true,
@@ -55,9 +55,12 @@ const AppContainer = createAppContainer(TabNavigator);
 export default class App extends React.Component {
   componentWillMount() {
     const firebaseConfig = {
-      //
-      //INSÆT DIN EGEN FIREBASECONFIG LIGE HER! ( Firebase --> ditprojektnavn --> møtrik --> project settings --> general --> config 
-      //
+        /**
+         *
+         * INSÆT DIN CONFIG HER
+         *
+         */
+
     };
     // Vi kontrollerer at der ikke allerede er en initialiseret instans af firebase
     // Så undgår vi fejlen Firebase App named '[DEFAULT]' already exists (app/duplicate-app).
