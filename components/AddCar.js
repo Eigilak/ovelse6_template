@@ -52,6 +52,7 @@ export default class AddCar extends React.Component {
         year: '',
         licensePlate: '',
       });
+      this.props.navigation.navigate('CarList')
     } catch (error) {
       Alert.alert(`Error: ${error.message}`);
     }
